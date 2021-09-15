@@ -1,6 +1,4 @@
-package guru.springframework.spring5recipeapp.domain;
-
-import com.sun.javafx.beans.IDProperty;
+package guru.springframework.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -15,6 +13,17 @@ public class Ingredient {
     private Recipe recipe;
     @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure unitOfMeasure;
+
+
+    public Ingredient() {
+
+    }
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure) {
+        this.description = description;
+        this.amount = amount;
+        this.unitOfMeasure = unitOfMeasure;
+    }
+
 
     public Long getId() {
         return id;
