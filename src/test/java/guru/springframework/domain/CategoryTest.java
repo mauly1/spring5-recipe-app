@@ -1,30 +1,37 @@
 package guru.springframework.domain;
 
+import org.junit.Before;
+import org.junit.Test;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+/**
+ * Created by jt on 6/17/17.
+ */
+public class CategoryTest {
 
-class CategoryTest {
     Category category;
-    @BeforeEach
-    public void setup(){
+
+    @Before
+    public void setUp(){
         category = new Category();
     }
 
     @Test
-    void getId() {
-        Long idValue =4L;
+    public void getId() throws Exception {
+        Long idValue = 4L;
+
         category.setId(idValue);
-        assertEquals(idValue,category.getId());
+
+        assertEquals(idValue, category.getId());
     }
 
     @Test
-    void getDescription() {
+    public void getDescription() throws Exception {
     }
 
     @Test
-    void getRecipes() {
+    public void getRecipes() throws Exception {
     }
+
 }
