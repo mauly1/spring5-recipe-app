@@ -92,5 +92,14 @@ public class RecipeServiceImplTest {
         verify(recipeRepository, times(1)).findAll();
         verify(recipeRepository, never()).findById(anyLong());
     }
+    @Test
+    public void testDeleteById(Long id) throws Exception{
+        //given
+        Long idToDelete =Long.valueOf(2L);
+        //when
+        recipeService.deleteById(idToDelete);
+        //then
+        verify(recipeRepository,times(1)).deleteById(anyLong());
+    }
 
 }
