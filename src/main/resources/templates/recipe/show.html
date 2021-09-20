@@ -22,10 +22,8 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="pannel-group">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h1 class="panel-title" ><a href="#" th:href="'/'" >Back To Main page</a></h1>
-                    </div>
+                <div class="panel-heading">
+                    <h1 class="panel-title" ><a href="#" th:href="'/'" >Back To Main page</a></h1>
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -88,10 +86,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h1 class="panel-title" >Ingredients</h1>
+                        <div class="row">
+                            <div class="col-md-11 ">
+                                <h1 class="panel-title">Ingredients</h1>
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-default" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -101,7 +105,7 @@
                                     <li th:remove="all">1 Teaspoon of chocolate</li>
                                     <li th:each="ingredient : ${recipe.ingredients}"
                                         th:text="${(ingredient.getAmount() +
-                                        ' ' + ingredient.unitOfMeasure.getDescription() +
+                                        ' ' + ingredient.getUnitOfMeasure().getDescription() +
                                         ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar</li>
                                 </ul>
                             </div>
@@ -136,6 +140,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
