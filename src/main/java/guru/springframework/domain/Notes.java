@@ -1,6 +1,7 @@
 package guru.springframework.domain;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class Notes {
@@ -34,5 +35,20 @@ public class Notes {
 
     public void setRecipeNotes(String recipeNotes) {
         this.recipeNotes = recipeNotes;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Notes notes = (Notes) o;
+        return Objects.equals(id, notes.id) &&
+                Objects.equals(recipeNotes, notes.recipeNotes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, recipeNotes);
     }
 }

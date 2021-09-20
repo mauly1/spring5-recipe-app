@@ -2,6 +2,8 @@ package guru.springframework.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Objects;
+
 @Entity
 public class Ingredient {
     @Id
@@ -64,5 +66,21 @@ public class Ingredient {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(amount, that.amount) &&
+                Objects.equals(unitOfMeasure, that.unitOfMeasure);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, description, amount, unitOfMeasure);
     }
 }
