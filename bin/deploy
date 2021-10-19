@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+env_name=$1
+temp_cf_space=$2
+cf_space="nonprod"
+cf_org_name="selfservice"
+cf_user_name="pivotal-telstra-selfcare@googlegroups.com"
+cf_password="erlang2@shark"
+
+echo "You have chosen to build and deploy - " $env_name
+
+if [[ $temp_cf_space -eq "a" ]]; then
+
+cf_space="acceptance"
+
+elif [[ $temp_cf_space -eq "d" ]]; then
+
+    cf_space="dev"
+
+elif [[ $temp_cf_space -eq "n" ]]; then
+
+    cf_space="nonprod"
+
+else
+
+    echo "choosing the default value"
+
+fi
+
+cf login -a https://api.system.np.sdppcf.com -u $cf_user_name -o $cf_org_name -s nonprod -p $cf_password
+
+if [ $env_name = "api" ]; then
+    cf push -f outage-service-api/manifest-nonprod.yml
+else
+    echo "unknown command"
+fi

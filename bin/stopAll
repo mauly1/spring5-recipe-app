@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source bin/common
+
+pushd $(dirname $0)/..
+PROJECT_DIR=$(pwd)
+
+cleanUp

@@ -1,0 +1,18 @@
+#!/bin/bash -e
+
+source bin/common
+
+pushd $(dirname $0)/..
+PROJECT_DIR=$(pwd)
+
+echo '====== running servicestatus api tests ====='
+cd $PROJECT_DIR/outage-service-api
+./gradlew clean build
+
+cd $PROJECT_DIR/outageservice-acceptance-mock
+hoverfly -webserver -import ./OutageServiceMockData.json &
+
+cd $PROJECT_DIR/outage-service-api
+SPRING_PROFILES_ACTIVE=local ./gradlew bootRun &
+
+waitForSpringBootToStart 8080

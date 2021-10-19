@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="593eeff9-83b5-4046-b007-163b0aa039b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/bamboo-common" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/bamboo-newrelic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/bamboo-run" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/bamboo-slack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/common" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/deploy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/reStart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/startAll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/stopAll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/VERSION.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/hoverctl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/hoverfly" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="main" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.8.2-bin/1um3pu5poco57pibs3g92d6vrf/apache-maven-3.8.2" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1xvjqOKu9V1jfsfPoUWTNMRYFdp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/restcall" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.50574714" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="guru.springframework.spring5recipeapp.domain" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="guru.springframework.controller" />
+      <recent name="guru.springframework.services" />
+      <recent name="guru.springframework.repositories" />
+      <recent name="guru.springframework.domain" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="guru.springframework" />
+      <recent name="guru.springframework.spring5recipeapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/restcall" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="guru.springframework.exceptions" />
+      <recent name="guru.springframework.spring5recipeapp.repositories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recipeservice-acceptance-mock" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Spring5RecipeAppApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring5-recipe-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guru.springframework.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="guru.springframework.controller" />
+      <option name="MAIN_CLASS_NAME" value="guru.springframework.controller.ImageControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageControllerTest.testGetImageNumberFormatException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring5-recipe-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guru.springframework.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="guru.springframework.controller" />
+      <option name="MAIN_CLASS_NAME" value="guru.springframework.controller.ImageControllerTest" />
+      <option name="METHOD_NAME" value="testGetImageNumberFormatException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipeControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring5-recipe-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guru.springframework.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="guru.springframework.controller" />
+      <option name="MAIN_CLASS_NAME" value="guru.springframework.controller.RecipeControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipeControllerTest.testPostNewRecipeForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring5-recipe-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guru.springframework.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="guru.springframework.controller" />
+      <option name="MAIN_CLASS_NAME" value="guru.springframework.controller.RecipeControllerTest" />
+      <option name="METHOD_NAME" value="testPostNewRecipeForm" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="guru.springframework in spring5-recipe-app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring5-recipe-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="guru.springframework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="guru.springframework" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Spring5RecipeAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring5-recipe-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="guru.springframework.Spring5RecipeAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RecipeControllerTest" />
+        <item itemvalue="JUnit.guru.springframework in spring5-recipe-app" />
+        <item itemvalue="JUnit.RecipeControllerTest.testPostNewRecipeForm" />
+        <item itemvalue="JUnit.ImageControllerTest" />
+        <item itemvalue="JUnit.ImageControllerTest.testGetImageNumberFormatException" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="593eeff9-83b5-4046-b007-163b0aa039b6" name="Default Changelist" comment="" />
+      <created>1631242645300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631242645300</updated>
+      <workItem from="1631242647623" duration="1674000" />
+      <workItem from="1631256919067" duration="5760000" />
+      <workItem from="1631510833806" duration="290000" />
+      <workItem from="1631516013370" duration="6235000" />
+      <workItem from="1631543492680" duration="8780000" />
+      <workItem from="1631685613896" duration="240000" />
+      <workItem from="1631688731069" duration="3353000" />
+      <workItem from="1631759674670" duration="3523000" />
+      <workItem from="1631768277484" duration="11967000" />
+      <workItem from="1631862576997" duration="1150000" />
+      <workItem from="1632023691578" duration="11932000" />
+      <workItem from="1632106778996" duration="11551000" />
+      <workItem from="1632144143009" duration="12400000" />
+      <workItem from="1632400134118" duration="420000" />
+      <workItem from="1632543901810" duration="945000" />
+      <workItem from="1632749602852" duration="1687000" />
+      <workItem from="1632805432719" duration="3333000" />
+      <workItem from="1633491891662" duration="1176000" />
+      <workItem from="1634563908593" duration="4696000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="241" y="324" key="#SQL_Dialects" timestamp="1632578683657">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="241" y="324" key="#SQL_Dialects/0.25.1680.931@0.25.1680.931" timestamp="1632578683657" />
+    <state x="304" y="149" width="1200" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631776563732">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="304" y="149" width="1200" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.931@0.25.1680.931" timestamp="1631776563732" />
+    <state x="653" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1632219062215">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="653" y="178" key="#com.intellij.ide.util.MemberChooser/0.25.1680.931@0.25.1680.931" timestamp="1632219062215" />
+    <state x="560" y="419" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1631586623667">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="560" y="419" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.1680.931@0.25.1680.931" timestamp="1631586623667" />
+    <state x="551" y="359" width="578" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631586430849">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="551" y="359" width="578" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.25.1680.931@0.25.1680.931" timestamp="1631586430849" />
+    <state x="614" y="376" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1631586720207">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="614" y="376" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.25.1680.931@0.25.1680.931" timestamp="1631586720207" />
+    <state width="345" height="466" key="DebuggerActiveHint" timestamp="1631845438029">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="345" height="466" key="DebuggerActiveHint/0.25.1680.931@0.25.1680.931" timestamp="1631845438029" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom" timestamp="1632408483951">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.25.1680.931@0.25.1680.931" timestamp="1632408483951" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center" timestamp="1632408483950">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.center/0.25.1680.931@0.25.1680.931" timestamp="1632408483950" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left" timestamp="1632408483950">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.left/0.25.1680.931@0.25.1680.931" timestamp="1632408483950" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right" timestamp="1632408483950">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.right/0.25.1680.931@0.25.1680.931" timestamp="1632408483950" />
+    <state width="1638" height="305" key="GridCell.Tab.1.bottom" timestamp="1632323079438">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.bottom/0.25.1680.931@0.25.1680.931" timestamp="1632323079438" />
+    <state width="1638" height="305" key="GridCell.Tab.1.center" timestamp="1632323079437">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.center/0.25.1680.931@0.25.1680.931" timestamp="1632323079437" />
+    <state width="1638" height="305" key="GridCell.Tab.1.left" timestamp="1632323079436">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.left/0.25.1680.931@0.25.1680.931" timestamp="1632323079436" />
+    <state width="1638" height="305" key="GridCell.Tab.1.right" timestamp="1632323079437">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.1.right/0.25.1680.931@0.25.1680.931" timestamp="1632323079437" />
+    <state width="1638" height="305" key="GridCell.Tab.2.bottom" timestamp="1631674013103">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.2.bottom/0.25.1680.931@0.25.1680.931" timestamp="1631674013103" />
+    <state width="1638" height="305" key="GridCell.Tab.2.center" timestamp="1631674013102">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.2.center/0.25.1680.931@0.25.1680.931" timestamp="1631674013102" />
+    <state width="1638" height="305" key="GridCell.Tab.2.left" timestamp="1631674013102">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.2.left/0.25.1680.931@0.25.1680.931" timestamp="1631674013102" />
+    <state width="1638" height="305" key="GridCell.Tab.2.right" timestamp="1631674013102">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state width="1638" height="305" key="GridCell.Tab.2.right/0.25.1680.931@0.25.1680.931" timestamp="1631674013102" />
+    <state x="378" y="149" key="Maven.ArtifactSearchDialog" timestamp="1631769423560">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="378" y="149" key="Maven.ArtifactSearchDialog/0.25.1680.931@0.25.1680.931" timestamp="1631769423560" />
+    <state x="374" y="299" width="1087" height="599" key="Registry" timestamp="1631257060345">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="374" y="299" width="1087" height="599" key="Registry/0.25.1680.931@0.25.1680.931" timestamp="1631257060345" />
+    <state x="541" y="197" key="RollbackChangesDialog" timestamp="1632117100317">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="541" y="197" key="RollbackChangesDialog/0.25.1680.931@0.25.1680.931" timestamp="1632117100317" />
+    <state x="328" y="69" key="SettingsEditor" timestamp="1631761307993">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="328" y="69" key="SettingsEditor/0.25.1680.931@0.25.1680.931" timestamp="1631761307993" />
+    <state x="100" y="125" width="1480" height="731" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1634620514495">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="100" y="125" width="1480" height="731" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.25.1680.931@0.25.1680.931" timestamp="1634620514495" />
+    <state x="595" y="256" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1632208335590">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="595" y="256" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.25.1680.931@0.25.1680.931" timestamp="1632208335590" />
+    <state x="382" y="230" width="916" height="623" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1631587311755">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="382" y="230" width="916" height="623" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.25.1680.931@0.25.1680.931" timestamp="1631587311755" />
+    <state x="165" y="221" width="973" height="735" key="find.popup" timestamp="1632811183904">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="165" y="221" width="973" height="735" key="find.popup/0.25.1680.931@0.25.1680.931" timestamp="1632811183904" />
+    <state x="246" y="150" key="new project wizard" timestamp="1633502430894">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="246" y="150" key="new project wizard/0.25.1680.931@0.25.1680.931" timestamp="1633502430894" />
+    <state x="505" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1632750145563">
+      <screen x="0" y="25" width="1680" height="931" />
+    </state>
+    <state x="505" y="228" width="670" height="676" key="search.everywhere.popup/0.25.1680.931@0.25.1680.931" timestamp="1632750145563" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/guru/springframework/controller/IndexControllerTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/guru/springframework/controller/IndexControllerTest.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/guru/springframework/controller/RecipeController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/guru/springframework/controller/RecipeControllerTest.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/guru/springframework/controller/RecipeControllerTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/guru/springframework/Spring5RecipeAppApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

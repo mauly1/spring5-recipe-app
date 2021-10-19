@@ -1,0 +1,54 @@
+#!/bin/bash
+
+function cleanUp {
+  if [ $? -eq 0 ]; then
+    echo "ALL SUITES PASSED"
+  else
+    echo "FAILURES !! FAILURES !! FAILURES !! FAILURES"
+  fi
+
+  HF=`ps -ax | grep "hoverfly" | grep -v "grep " | awk '{print $1}'`
+  if [[ $HF != '' ]]; then
+    kill -9 $HF
+    echo "Hoverfly process with PID $HF has been deleted"
+  else
+    echo "No process found for Hoverfly"
+  fi
+
+  SSP=`ps -ax | grep "guru.springframework.Spring5RecipeAppApplication" | grep -v "grep " | awk '{print $1}'`
+  if [[ $SSP != '' ]]; then
+    kill -9 $SSP
+    echo "Spring5RecipeAppApplication process with PID $SSP has been Killed"
+  else
+    echo "No process found for Spring5RecipeAppApplication"
+  fi
+
+  BR=`ps -ax | grep "org.gradle.wrapper.GradleWrapperMain bootRun" | grep -v "grep " | grep "recipe-service-api" | awk '{print $1}'`
+  if [[ $BR != '' ]]; then
+    kill -9 $BR
+    echo "BootRun process with PID $BR has been Killed"
+  else
+    echo "No process found for Bootrun"
+  fi
+  popd
+}
+
+function waitForSpringBootToStart {
+  echo '====== checking api has been started correctly ======'
+  API_MAX_TRIES=90
+  RETRIES_COUNT=0
+  RESPONSE="000"
+  while [[ $RESPONSE != "404" && $RETRIES_COUNT -lt $API_MAX_TRIES ]]
+  do
+    RESPONSE=`curl --write-out "%{http_code}\n" --silent --output /dev/null "http://localhost:9203" || true`
+    sleep 1
+    RETRIES_COUNT=$RETRIES_COUNT+1
+  done
+
+  if [[ $RETRIES_COUNT -ge $API_MAX_TRIES ]]; then
+      echo 'Spring Boot app did NOT start!!!'
+      exit 1
+  else
+      echo 'Spring Boot app did START'
+  fi
+}

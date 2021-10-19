@@ -1,0 +1,61 @@
+#!/bin/bash
+#################################################################
+# Script: bamboo-run <step>
+#
+# Where:
+#   <step> (is mandatory):
+#       ci          - Builds and Deploys to the CI environment
+#       journey     - Runs the journey tests
+#       acceptance  - Deploys to the ACCEPTANCE environment
+#       nonprod     - Deploys to the NON-PROD environment
+#       prod        - Deploys to the PROD environment
+#
+# This script is used for building/testing and deploying to the
+# selfservice environments.  The script runs inside a docker container
+#
+# Initiated from bamboo:
+# https://master2.ci.ae.sda.corp.telstra.com/browse/AS-SEL
+#
+#################################################################
+source bin/bamboo-common
+
+if [ "${step}" == "ci" ]; then
+    manifestEnv="-${step}"
+
+    gradleBuild && \
+
+    apiTest && \
+
+    if [[ $branch != feature/* ]]; then
+
+        cfLogin && \
+        deployBackEnd && \
+        deployAcceptanceMock && \
+        cfLogout
+
+    else
+        echo "###########################################################" && \
+        echo "SKIPPING DEPLOY"
+    fi
+
+elif [ "${step}" == "journey" ]; then
+    runJourney
+
+elif [ "${step}" == "acceptance" ]; then
+    manifestEnv="-nonprod"
+
+    gradleBuild && \
+
+    cfLogin && \
+
+    deployBackEnd && \
+
+    cfLogout
+elif [ "${step}" == "apiArtifact" ]; then
+
+    gradleBuild && apiArtifact
+
+else
+    echo "Invalid step passed in!"
+    exit 1
+fi

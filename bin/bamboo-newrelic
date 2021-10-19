@@ -1,0 +1,58 @@
+#!/bin/bash
+
+ACCOUNT_ID="${1}"
+APP_ID="${2}"
+API_KEY="${3}"
+CUSTOM_EVENT_API_KEY="${4}"
+VERSION="${5}"
+DESCRIPTION="${6}"
+APP_NAME="${7}"
+USER="${8}"
+CHANGE_LOG="${9}"
+BUILD_PROXY="${10}"
+
+export http_proxy="$BUILD_PROXY"
+export https_proxy="$BUILD_PROXY"
+
+generate_v2_deployment_payload()
+{
+  cat <<EOF
+{
+  "deployment": {
+    "revision": "$VERSION",
+    "changelog": "$CHANGE_LOG",
+    "description": "$DESCRIPTION",
+    "user": "$USER"
+  }
+}
+EOF
+}
+
+generate_custom_event_payload()
+{
+  cat <<EOF
+{
+    "eventType": "deployment",
+    "appId": "$APP_ID", 
+    "appName": "$APP_NAME",
+    "revision": "$VERSION",
+    "changelog": "$CHANGE_LOG",
+    "description": "$DESCRIPTION",
+    "user": "$USER"
+}
+EOF
+}
+
+printf "\ngenerate_v2_deployment_payload: \n%s \n\n" "$(generate_v2_deployment_payload)"
+
+curl -i "https://api.newrelic.com/v2/applications/$APP_ID/deployments.json" \
+     -H "X-Api-Key:$API_KEY" \
+     -H "Content-Type: application/json" \
+     -d  "$(generate_v2_deployment_payload)"
+     
+printf "\ngenerate_custom_event_payload: \n%s \n\n" "$(generate_custom_event_payload)"
+
+curl -i "https://insights-collector.newrelic.com/v1/accounts/$ACCOUNT_ID/events" \
+    -H "Content-Type: application/json" \
+    -H "X-Insert-Key: $CUSTOM_EVENT_API_KEY" \
+    -d "$(generate_custom_event_payload)"

@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+source bin/common
+
+pushd $(dirname $0)/..
+PROJECT_DIR=$(pwd)
+
+#echo '====== building recipe-service-api ====='
+#cd $PROJECT_DIR/recipe-service-api
+#./gradlew clean build -x test
+
+#echo '====== starting recipe-service-api ====='
+#cd $PROJECT_DIR/recipe-service-api
+#SPRING_PROFILES_ACTIVE=local ./gradlew bootRun &
+
+echo '====== staring up recipe-service-mock ====='
+cd $PROJECT_DIR/recipeservice-acceptance-mock
+hoverfly -webserver -import ./OutageServiceMockData.json &
+
+waitForSpringBootToStart
+

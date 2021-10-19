@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+env_name=$1
+
+echo "You have chosen to build and deploy - " $env_name
+
+if [ $env_name = "api" ]; then
+    cd recipe-service-api
+    ./gradlew build -x test
+else
+
+echo "unknown command"
+
+fi

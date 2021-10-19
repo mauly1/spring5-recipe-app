@@ -1,0 +1,44 @@
+#!/bin/bash
+
+buildProxyFull="${1}"
+SLACK_CHANNEL="${2}"
+WEBHOOK_URL="${3}"
+PLAN="${4}"
+RESULTS="${5}"
+KEY="${6}"
+BRANCH="${7}"
+TRIGGERED_BY="${8}"
+BUILD_TYPE="${9}"
+BUILD_STATE="${10}"
+
+export http_proxy=${buildProxyFull}
+export https_proxy=${buildProxyFull}
+
+if [ -z "${BUILD_STATE}" ]; then
+    sleep 10
+    if [[ "${BUILD_TYPE}" == "Build" ]]; then
+        BUILD_STATE=`curl --silent https://master2.ci.ae.sda.corp.telstra.com/rest/api/latest/result/${KEY}/latest.json?buildstate | jq -r '.buildState'`
+    else
+        deploymentId=`echo ${RESULTS} | awk -F= '{print $2}'`
+        BUILD_STATE=`curl --silent https://master2.ci.ae.sda.corp.telstra.com/rest/api/latest/deploy/result/${deploymentId} | jq -r '.deploymentState'`
+    fi
+fi
+
+echo "Plan Name: $PLAN"
+echo "Plan Key: $KEY"
+echo "Plan Branch: $BRANCH"
+echo "Plan URL: $RESULTS"
+echo "Triggered By: $TRIGGERED_BY"
+
+COLOUR=warning
+if [[ "${BUILD_STATE}" == "Successful" || "${BUILD_STATE}" == "SUCCESS" ]]; then
+    COLOUR=good
+elif [[ "${BUILD_STATE}" == "Failed" || "${BUILD_STATE}" == "FAILED" ]]; then
+    COLOUR=danger
+fi
+
+WEBHOOK_JSON="payload={\"channel\": \"${SLACK_CHANNEL}\", \"username\": \"Bamboo\", \"icon_emoji\": \":bamboo:\", \"attachments\": [ { \"fallback\": \"${BUILD_TYPE} ${BUILD_STATE}: <${RESULTS}|${PLAN} - ${KEY}>\", \"color\": \"${COLOUR}\", \"pretext\" : \"${BUILD_TYPE} ${BUILD_STATE}\", \"title\": \"${PLAN}\",  \"text\" : \"<${RESULTS}|${KEY}>\",\"fields\": [ { \"title\": \"Branch\", \"value\": \"${BRANCH}\", \"short\": true }, { \"title\": \"Triggered By\", \"value\": \"${TRIGGERED_BY}\", \"short\": true } ] } ] }"
+echo "Sending JSON to Slack:"
+echo $WEBHOOK_JSON
+
+curl -s -X POST --data-urlencode "$WEBHOOK_JSON" $WEBHOOK_URL

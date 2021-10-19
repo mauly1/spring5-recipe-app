@@ -1,0 +1,82 @@
+step=$1
+yarnPath=$HOME/.yarn/bin
+export PATH=${yarnPath}:${PATH}
+cfPath=/usr/bin
+manifestEnv=
+testOutput=../out/reports
+gradleProxyOptions="-Dhttp.proxyHost=${bamboo_buildProxyHost}"
+gradleProxyOptions="${gradleProxyOptions} -Dhttp.proxyPort=${bamboo_buildProxyPort}"
+gradleProxyOptions="${gradleProxyOptions} -Dhttps.proxyHost=${bamboo_buildProxyHost}"
+gradleProxyOptions="${gradleProxyOptions} -Dhttps.proxyPort=${bamboo_buildProxyPort}"
+
+function cfLogin {
+    echo "###########################################################" && \
+    echo "LOGIN TO CF" && \
+
+    ${cfPath}/cf login \
+        -a ${cfEndpoint} \
+        -u ${cfUsername} \
+        -p "${cfPassword}" \
+        -o ${cfOrg} \
+        -s ${cfSpace}
+}
+
+function cfLogout {
+    echo "###########################################################" && \
+    echo "LOGOUT OF CF" && \
+
+    ${cfPath}/cf logout
+}
+
+function gradleBuild {
+    echo "###########################################################" && \
+    echo "BUILD BACKEND" && \
+
+    cd ${bamboo_build_working_directory}/recipe-service-api && \
+    ./gradlew ${gradleProxyOptions} build -x test
+}
+
+
+function apiTest {
+    echo "###########################################################" && \
+    echo "RUNNING BACKEND TESTS" && \
+
+    rm -rf ${testOutput} 2>/dev/null && mkdir -p ${testOutput} 2>/dev/null && cd ${bamboo_build_working_directory}/recipe-service-api && \
+        ./gradlew ${gradleProxyOptions} :recipe-service-api:test |& tee -a ${testOutput}/allTestResults.txt
+}
+
+function deployBackEnd {
+    echo "###########################################################" && \
+    echo "DEPLOY BACKEND" && \
+
+    cd ${bamboo_build_working_directory} && \
+    ${cfPath}/cf push \
+        -f recipe-service-api/manifest${manifestEnv}.yml
+}
+
+function deployAcceptanceMock {
+    echo "###########################################################" && \
+    echo "DEPLOY ACCEPTANCE MOCK" && \
+
+    cd ${bamboo_build_working_directory} && \
+    ${cfPath}/cf push \
+        -f recipeservice-acceptance-mock/manifest.yml
+}
+
+
+function deployBackEndZeroDowntime {
+    echo "###########################################################" && \
+    echo "DEPLOY BACKEND (ZERO DOWNTIME)" && \
+
+    cd ${bamboo_build_working_directory} && \
+    cf zero-downtime-push recipe-service-api -f recipe-service-api/manifest${manifestEnv}.yml
+}
+
+
+function apiArtifact {
+    echo "###########################################################" && \
+    echo "CREATE BACKEND ARTIFACT" && \
+
+    cd ${bamboo_build_working_directory}/recipe-service-api && \
+    tar -zcvf recipe-service-apiArtifact.tgz build manifest*
+}

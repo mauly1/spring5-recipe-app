@@ -1,0 +1,9 @@
+guru/springframework/controller/IngredientControllerTest.class
+guru/springframework/services/RecipeServiceImplTest.class
+guru/springframework/controller/IndexControllerTest.class
+guru/springframework/repositories/UnitOfMeasureRepositoryIT.class
+guru/springframework/controller/RecipeControllerTest.class
+guru/springframework/services/RecipeServiceIT.class
+guru/springframework/spring5recipeapp/Spring5RecipeAppApplicationTests.class
+guru/springframework/controller/ImageControllerTest.class
+guru/springframework/domain/CategoryTest.class
