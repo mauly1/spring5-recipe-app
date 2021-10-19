@@ -13,23 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="593eeff9-83b5-4046-b007-163b0aa039b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/bamboo-common" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/bamboo-newrelic" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/bamboo-run" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/bamboo-slack" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/common" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/deploy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/reStart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/startAll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/stopAll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/VERSION.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/hoverctl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipeservice-acceptance-mock/hoverfly" afterDir="false" />
-    </list>
+    <list default="true" id="593eeff9-83b5-4046-b007-163b0aa039b6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,14 +74,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="guru.springframework.spring5recipeapp.domain" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="guru.springframework.controller" />
       <recent name="guru.springframework.services" />
       <recent name="guru.springframework.repositories" />
       <recent name="guru.springframework.domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recipeservice-acceptance-mock" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -117,9 +102,8 @@
       <recent name="guru.springframework.exceptions" />
       <recent name="guru.springframework.spring5recipeapp.repositories" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/recipeservice-acceptance-mock" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="guru.springframework.spring5recipeapp.domain" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Spring5RecipeAppApplication">
@@ -357,10 +341,10 @@
       <screen x="0" y="25" width="1680" height="931" />
     </state>
     <state x="374" y="299" width="1087" height="599" key="Registry/0.25.1680.931@0.25.1680.931" timestamp="1631257060345" />
-    <state x="541" y="197" key="RollbackChangesDialog" timestamp="1632117100317">
+    <state x="541" y="197" key="RollbackChangesDialog" timestamp="1634622501986">
       <screen x="0" y="25" width="1680" height="931" />
     </state>
-    <state x="541" y="197" key="RollbackChangesDialog/0.25.1680.931@0.25.1680.931" timestamp="1632117100317" />
+    <state x="541" y="197" key="RollbackChangesDialog/0.25.1680.931@0.25.1680.931" timestamp="1634622501986" />
     <state x="328" y="69" key="SettingsEditor" timestamp="1631761307993">
       <screen x="0" y="25" width="1680" height="931" />
     </state>
