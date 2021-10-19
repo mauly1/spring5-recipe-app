@@ -1,0 +1,54 @@
+frontend:
+  origins:
+    - https://nonprodurl.com
+
+sspKeyManagement:
+  commonKeyStore:
+    path: nonprod/common-keystore.jks
+    password: ${vcap.common-keystore-password}
+  commonTrustStore:
+    path: nonprod/common-truststore.jks
+    password: ${vcap.common-truststore-password}
+  okapiKeyStore:
+    alias: recipe-api
+    path: prod/okapi/okapi-keystore.jks
+    password: password
+
+telstra:
+  outage-api:
+    endpoint:
+      uri: https://api.endpoint.com.au/v1/recipe-mgmt
+  mass-outage-api:
+      endpoint:
+        uri: https://recipe.com.au/v1/recipe-mgmt
+  okapi:
+    address-lookup-api:
+      connection:
+        read-timeout: 10000
+        connection-timeout: 10000
+        endpoint:  https://slot5.recipe.com/v3/recipetocomplete/search
+      oauth2:
+        client-id: ${vcap.services.ssp-keymanagement.credentials.recipe-lookup-api.client-id}
+        client-secret: ${vcap.services.ssp-keymanagement.credentials.recipe-lookup-api.client-secret}
+        access-token-uri: https://slot3.recipe.com/v2/oauth/token
+        grant-type: client_credentials
+    address-verification-api:
+      oauth2:
+        client-id: ${vcap.services.ssp-keymanagement.credentials.recipe-verification-api.client-id}
+        client-secret: ${vcap.services.ssp-keymanagement.credentials.recipe-verification-api.client-secret}
+        access-token-uri: https://slot5.recipe.com/v2/oauth/token
+        grant-type: client_credentials
+      connection:
+        read-timeout: 10000
+        connection-timeout: 10000
+        endpoint :  https://recipe.com/v3/recipe/validation/recipe-validation
+google:
+  recaptcha-api:
+    secret: abc
+
+geofiltering:
+  enable: false
+
+throttling:
+  limit: 5000
+  requestLimit: 20000
