@@ -1,0 +1,13 @@
+---
+applications:
+  - name: recipe-service-api
+    path: build/libs/recipe-service-api.jar
+    instances: 2
+    routes:
+      - route: myrecipe.com/home
+      - route: myrecipe.com.au/home
+    services:
+      - ssp-keymanagement
+      - new-relic-production
+    env:
+      SPRING_PROFILES_ACTIVE: prod
